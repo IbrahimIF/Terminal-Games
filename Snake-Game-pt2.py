@@ -49,11 +49,9 @@ while key != ESC:
     # this moves the snakes head depeneding on the key pressed
 
     # check if we hit the border
-    if y == 0: break
+    if y == 0 or x == 0: break
     if y == 19: break
-    if x == 0: break
     if x == 59: break
-
 
     # if snake runs over itself
     if snake[0] in snake[1:]: break
