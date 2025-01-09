@@ -20,7 +20,7 @@ win.addch(food[0], food[1], '#')
 score = 0
 
 ESC = 27 # the number 27 represents ESC as mentioned in curses module
-key =  curses.KEY_RIGHT
+key =  ord('d')
 
 while key != ESC:
     win.addstr(0, 2, 'score ' + str(score) + ' ')
@@ -30,28 +30,30 @@ while key != ESC:
     event = win.getch() # get the next character
     key = event if event != -1 else prev_key # allwos the snake to continue in one direction if the key was not pressed
     
-    if key not in [curses.KEY_LEFT, curses.KEY_RIGHT, curses.KEY_UP, curses.KEY_DOWN, ESC]: # if none of the keys have been found
+    if key not in [ ord('w'), ord('a'), ord('s'), ord('d'), ESC]: # if none of the keys have been found
         key = prev_key
     
     # calculate the next coordinates
     y = snake[0][0]
     x = snake[0][1]
-    if key == curses.KEY_UP:
+    if key == ord('w'):
         y += 1 #increases the coordinate (moves the snake) based on the key
-    if key == curses.KEY_DOWN:
+    if key == ord('s'):
         y -= 1 #increases the coordinate (moves the snake) based on the key
-    if key == curses.KEY_LEFT:
+    if key == ord('a'):
         x -= 1 #increases the coordinate (moves the snake) based on the key
-    if key == curses.KEY_RIGHT:
+    if key == ord('d'):
         x += 1 #increases the coordinate (moves the snake) based on the key
     
     snake.insert(0, (y, x)) # even though .append is faster then .insert, using .insert shouldn't be a worry 
     # this moves the snakes head depeneding on the key pressed
 
     # check if we hit the border
-    if y == 0 or x == 0: break
+    if y == 0: break
     if y == 19: break
+    if x == 0: break
     if x == 59: break
+
 
     # if snake runs over itself
     if snake[0] in snake[1:]: break
@@ -79,5 +81,4 @@ while key != ESC:
 print(event)
 curses.endwin()
 print(f"Final score = {score}") # returns the score
-
 
