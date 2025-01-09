@@ -37,9 +37,9 @@ while key != ESC:
     y = snake[0][0]
     x = snake[0][1]
     if key == ord('w'):
-        y += 1 #increases the coordinate (moves the snake) based on the key
-    if key == ord('s'):
         y -= 1 #increases the coordinate (moves the snake) based on the key
+    if key == ord('s'):
+        y += 1 #increases the coordinate (moves the snake) based on the key
     if key == ord('a'):
         x -= 1 #increases the coordinate (moves the snake) based on the key
     if key == ord('d'):
