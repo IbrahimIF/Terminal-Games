@@ -1,8 +1,11 @@
 import curses
+import locale
 from random import randint # gives a random interger
 # setup window (screen)
 
-curses.initscr() 
+locale.setlocale(locale.LC_ALL, "en_US.UTF-8")  # Set locale for Unicode support
+
+curses.initscr()
 win = curses.newwin(20, 60, 0, 0) # y,x is order
 win.keypad(1) #allows use of keyboard for terminal
 curses.noecho() # dosen't allow listening to other input characters
@@ -14,13 +17,17 @@ win.nodelay(1) # -1 # not waiting for the next user input until the user enters 
 snake = [(4, 10), (4, 9), (4,8)] #a list containing a tuple for snake coordinates (the front is the head the last is the tail)
 food = (10, 20) # a tuple for food coordinates
 
-win.addch(food[0], food[1], '#')
+food_emoji = "🍎"
+snake_emoji = "#"
+
+win.addstr(food[0], food[1], food_emoji)
 
 # game logic
 score = 0
 
 ESC = 27 # the number 27 represents ESC as mentioned in curses module
 key =  ord('d')
+
 
 while key != ESC:
     win.addstr(0, 2, 'score ' + str(score) + ' ')
@@ -66,17 +73,17 @@ while key != ESC:
             food = (randint(1,18), randint(1,58)) # uses random to place food around area
             if food in snake:
                 food = () # removes the food
-        win.addch(food[0], food[1], '#')
+        win.addstr(food[0], food[1], '  ') # emojis take up two spaces, clearing two spaces
     else:
         # move snake
         last = snake.pop()
         win.addch(last[0], last[1], ' ')
-    win.addch(snake[0][0], snake[0][1], '*')
+    win.addch(snake[0][0], snake[0][1], snake_emoji)
 
     for c in snake:
-        win.addch(c[0], c[1], '*')
+        win.addch(c[0], c[1], snake_emoji)
     
-    win.addch(food[0], food[1], '#')
+    win.addstr(food[0], food[1], food_emoji)
 
 print(event)
 curses.endwin()
