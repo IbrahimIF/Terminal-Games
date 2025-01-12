@@ -1,45 +1,41 @@
 import curses
-from curses import wrapper
+import locale
+from random import randint # gives a random interger
+# setup window (screen)
 
-def main(stdscr):
-    # Initialize the screen
-    curses.curs_set(0)
-    stdscr.clear()
-    
-    # Set up options and initial index
-    options = ["Rock", "Paper", "Scissors"]
-    current_option = 0
-    
-    # Game title box
-    stdscr.addstr(1, 2, "Welcome to Rock Paper Scissors Terminal Game")
-    stdscr.addstr(2, 2, "Use arrow keys to choose an option and press Enter")
+locale.setlocale(locale.LC_ALL, "en_US.UTF-8")  # Set locale for Unicode support
 
-    while True:
-        # Render options
-        for idx, option in enumerate(options):
-            x = 10
-            y = 5 + idx
-            if idx == current_option:
-                stdscr.attron(curses.A_REVERSE)
-                stdscr.addstr(y, x, option)
-                stdscr.attroff(curses.A_REVERSE)
-            else:
-                stdscr.addstr(y, x, option)
-        
-        # Get user input
-        key = stdscr.getch()
-        
-        # Navigate options with arrow keys
-        if key == curses.KEY_UP and current_option > 0:
-            current_option -= 1
-        elif key == curses.KEY_DOWN and current_option < len(options) - 1:
-            current_option += 1
-        elif key == ord('\n'):
-            # User selected an option
-            stdscr.clear()
-            stdscr.addstr(7, 10, f"You chose {options[current_option]}")
-            stdscr.refresh()
-            stdscr.getch()
-            break
+curses.initscr()
+win = curses.newwin(20, 60, 0, 0) # y,x is order
+win.keypad(1) #allows use of keyboard for terminal
+win.border(0)
+curses.curs_set(0) # hides the cursor
 
-wrapper(main)
+arrow = "←"
+
+rock = "🧱"
+paper = "📃"
+scissors = "✂️"
+
+ESC = 27
+ENTER = 343
+key = ord('d')
+score = 0
+
+# Set up options and initial index
+options = ["Rock", "Paper", "Scissors"]
+current_option = 0
+
+while key != ESC:
+    win.addstr(0, 2, 'score ' + str(score) + ' ')
+    win.addstr(4, 2, "Welcome to Rock Paper Scissors Terminal Game")
+    win.addstr(5, 2, "Use arrow keys to choose an option and press Enter")
+    win.addstr(6, 2, "press Enter to play")
+    key = win.getch() #get user input
+
+    if key == ord('\n'): 
+        win.clear()
+        win.refresh()
+
+curses.endwin()
+
