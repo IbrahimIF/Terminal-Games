@@ -1,5 +1,6 @@
 import curses
 import locale
+
 from random import randint # gives a random interger
 # setup window (screen)
 
