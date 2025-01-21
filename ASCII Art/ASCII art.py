@@ -3,7 +3,7 @@ import tkinter as tk
 from tkinter import scrolledtext
 
 # Load and process the image
-im = Image.open("Untitled.jpg")
+im = Image.open("ASCII Art\Image.jpg")
 
 pixels = list(im.getdata())
 pixel_matrix = [pixels[i:i + im.width] for i in range(0, len(pixels), im.width)]

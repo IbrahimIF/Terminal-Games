@@ -31,7 +31,7 @@ def main(win):
         # Clear the screen and display the main menu
         win.clear()
         win.border(0)
-        win.addstr(0, 2, f"{arrow} Rock Paper Scissors Terminal Game!")
+        win.addstr(0, 2, f"Rock Paper Scissors Terminal Game!")
         win.addstr(2, 2, f"Score: {score}")
         win.addstr(3, 2, "Use UP/DOWN arrows to choose, ENTER to play, ESC to quit.")
 
@@ -57,17 +57,17 @@ def main(win):
             # Play the game
             win.clear()
             win.border(0)
-            user_choice = options[current_option].split(" ")[0].lower()  # Get user choice
-            computer_choice = random.choice(["rock", "paper", "scissors"])  # Random computer choice
+            user_choice = options[current_option].lower()  # Get user choice
+            computer_choice = random.choice(["rock 🧱", "paper 📃", "scissors ✂️"])  # Random computer choice
             win.addstr(2, 2, f"You chose: {user_choice.capitalize()}")
             win.addstr(3, 2, f"Computer chose: {computer_choice.capitalize()}")
 
             # Determine the result
             if user_choice == computer_choice:
                 result = "It's a tie!"
-            elif (user_choice == "rock" and computer_choice == "scissors ✂️") or \
-                 (user_choice == "paper" and computer_choice == "rock 🧱") or \
-                 (user_choice == "scissors" and computer_choice == "paper 📃"):
+            elif (user_choice == "rock 🧱" and computer_choice == "scissors ✂️") or \
+                 (user_choice == "paper 📃" and computer_choice == "rock 🧱") or \
+                 (user_choice == "scissors ✂️" and computer_choice == "paper 📃"):
                 result = "You win!"
                 score += 1
             else:

@@ -86,7 +86,6 @@ while key != ESC:
     
     win.addstr(food[0], food[1], food_emoji)
 
-print(event)
 curses.endwin()
 print(f"Final score = {score}") # returns the score
 
