@@ -10,9 +10,9 @@
 ![Static Badge](https://img.shields.io/badge/made_with-python-blue)
 
 ##### **Description**:
-This is a large group of individual remakes of basic and wellknown games in python such as the Snake game and Rock Paper Scissors, that can be played in the terminal of an IDE.
-Most games need the controls, WASD and not the arrow keys. 
-Most games also uses emojis as visuals for example an apple as food representation in the snake game.
+A big collection of individual remakes of simple and well-known games in Python such as the Snake game and Rock Paper Scissors, that can be played in the terminal of an IDE.
+Most games require WASD controls, not the arrow keys. 
+Most games also use emojis as visuals, for example an apple as food representation in the snake game.
 
 ----
 ## Features & Showcases:
