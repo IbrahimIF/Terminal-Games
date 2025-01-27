@@ -19,15 +19,15 @@ Most games also use emojis as visuals, for example an apple as food representati
 This project includes:
 - **Rock Paper Scissors**: Play the classic game against the computer.
 
-![Rock Paper Scissors](https://github.com/user-attachments/assets/4c388f78-d106-4ea1-a011-0e4c91adaa9c)
+<img src="https://github.com/user-attachments/assets/4c388f78-d106-4ea1-a011-0e4c91adaa9c" alt="Rock Paper Scissors" width="500">
 
 - **Snake Game**: Play the classic snake game directly in the terminal.
 
-![Snake Game](https://github.com/user-attachments/assets/3bfa2b88-faf5-43d5-8886-d7f2ec4f6523)
+<img src="https://github.com/user-attachments/assets/3bfa2b88-faf5-43d5-8886-d7f2ec4f6523" alt="Snake Game" width="500">
 
 - **ASCII Art**: Display images converted to text-based art within the terminal.
 
-![ASCII Art](https://github.com/user-attachments/assets/6b2a1b54-1343-4db6-bb2c-8a81e1559b4b)
+<img src="https://github.com/user-attachments/assets/6b2a1b54-1343-4db6-bb2c-8a81e1559b4b" alt="ASCII Art" width="500">
 
 
 Near-Future:
