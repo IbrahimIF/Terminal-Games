@@ -14,7 +14,6 @@ A big collection of individual remakes of simple and well-known games in Python 
 Most games require WASD controls, not the arrow keys. 
 Most games also use emojis as visuals, for example an apple as food representation in the snake game.
 
-----
 ## Features & Showcases:
 This project includes:
 - **Rock Paper Scissors**: Play the classic game against the computer.
@@ -25,21 +24,24 @@ This project includes:
 
 <img src="https://github.com/user-attachments/assets/3bfa2b88-faf5-43d5-8886-d7f2ec4f6523" alt="Snake Game" width="500">
 
+- **Tic Tac Toe**: Play the classic Tic Tac Toe game directly in the terminal.
+
+<img src="https://github.com/user-attachments/assets/ec167b43-fea7-4b28-90f8-c54cc5e1327f" alt="ASCII Art" width="500">
+
 - **ASCII Art**: Display images converted to text-based art within the terminal.
 
 <img src="https://github.com/user-attachments/assets/6b2a1b54-1343-4db6-bb2c-8a81e1559b4b" alt="ASCII Art" width="500">
 
 
-Near-Future:
+Future Additions:
 - **Connect Four**: Play the classic Connect Four game in the terminal.
-- **Tic-Tac-Toe**: Play the classic Tic-Tac-Toe game in the terminal.
 - **Game of Life**: Explore Conway's Game of Life simulation in the terminal.
 - **Pac Man**: Play a simplified version of Pac-Man in the terminal.
 
 ----
 ## Technologies and Tools Utilised:
 
-[![My Skills](https://skillicons.dev/icons?i=python,vscode)](https://skillicons.dev)
+![My Skills](https://go-skill-icons.vercel.app/api/icons?i=python,vscode,terminal&titles=true)
 
 Dependencies:
 - Curses Python
@@ -55,6 +57,8 @@ Dependencies:
 Inspirations:
 - [ASCII art by Robert Heaton](https://robertheaton.com/2018/06/12/programming-projects-for-advanced-beginners-ascii-art/)
 - [Snake by Robert Heaton](https://robertheaton.com/2018/12/02/programming-project-5-snake/)
+- [Medium - Building a Python Tic-Tac-Toe Game for the Terminal](https://medium.com/@mattdeveloper/building-a-python-tic-tac-toe-game-for-the-terminal-a-step-by-step-guide-4bc62befeee8)
+- [Mattdeveloper (Github) - Tic-Tac-Toe](https://github.com/mattdeveloper/python-terminal-tic-tac-toe-game/tree/main)
 - [Tic-Tac-Toe AI by Robert Heaton part 1](https://robertheaton.com/2018/10/09/programming-projects-for-advanced-beginners-3-a/)
 - [Tic-Tac-Toe AI by Robert Heaton part 2](https://robertheaton.com/2018/10/09/programming-projects-for-advanced-beginners-3-b/)
 - [Game of Life by Robert Heaton](https://robertheaton.com/2018/07/20/project-2-game-of-life/)
