@@ -33,7 +33,7 @@ def main(win):
         win.border(0)
         win.addstr(0, 2, f"Rock Paper Scissors Terminal Game!")
         win.addstr(2, 2, f"Score: {score}")
-        win.addstr(3, 2, "Use UP/DOWN arrows to choose, ENTER to play, ESC to quit.")
+        win.addstr(3, 2, "Use W (up) /S (down) arrows to choose, ENTER to play, ESC to quit.")
 
         # Display the options with the arrow
         for idx, option in enumerate(options):
